@@ -1,0 +1,19 @@
+Options +FollowSymLinks
+RewriteEngine On
+#RewriteBase /
+#RewriteRule ^test\.php$ - [L]
+#RewriteRule ^(.*)$ test.php?domainname=$1 [L,NC]
+#RewriteEngine On
+#RewriteRule index.php test.php
+#RewriteRule ^(.*)$ text.php?domainname=$1 [L,NC]
+#RewriteRule . /test.php [L]
+
+#RewriteRule ^/?(.*)\/?$ index.php?domainname=$1 [L,NC]
+#RewriteRule ^/?(.*)/(.*)/(.*)$ index.php?domainname=$1&bb=$2&cc=$3 [L]
+
+RewriteRule ^/?(.*).html$ index.php?domainname=$1 [L]
+
+RewriteRule ^banned-adsense-list/?$ banned-adsense-list.php [NC,L]
+RewriteRule ^banned-adsense-list/([0-9]+)/?$ banned-adsense-list.php?page=$1 [NC,L]
+RewriteRule ^banned-adsense-list/(isbanned|isnotbanned|notbanned)/?$ banned-adsense-list.php?isbanned=$1 [L,NC]
+RewriteRule ^banned-adsense-list/(isbanned|isnotbanned|notbanned)/([0-9]+)/?$ banned-adsense-list.php?isbanned=$1&page=$2 [L,NC]

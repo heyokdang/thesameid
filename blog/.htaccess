@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine On
+#RewriteBase /
+RewriteRule ^(.*)/(.*)/(.*)$ index.php?country=$1&state=$2&city=$3 [L]
